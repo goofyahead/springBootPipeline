@@ -1,6 +1,5 @@
-.gradle/
-.idea
+.*
 gradle/
-gradlew*
 out/
 settings.gradle
+build/
