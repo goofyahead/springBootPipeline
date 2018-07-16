@@ -21,4 +21,15 @@ public class CalculatorController {
     public String multiply(@RequestParam("a") int a, @RequestParam("b") int b) {
         return String.valueOf(a * b);
     }
+
+
+    @RequestMapping("/divide")
+    public String divide(@RequestParam("a") int a, @RequestParam("b") int b) throws Exception {
+        if (b > 0) {
+            return String.valueOf(a / b);
+        } else {
+            System.out.println("dividing by 0, warning!");
+            throw new Exception("cant divide by 0");
+        }
+    }
 }
